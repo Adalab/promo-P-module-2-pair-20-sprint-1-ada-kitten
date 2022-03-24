@@ -115,9 +115,25 @@ if( kittenDesc1.includes(descrSearchText) ) {
 // EVENTO CLICK PARA EL +
 
 const find = document.querySelector('.js-plus');
+const newFormElement = document.querySelector('.js-new-form');
+
+function showNewCatForm() {
+  newFormElement.classList.remove('collapsed');
+}
+function hideNewCatForm() {
+  newFormElement.classList.add('collapsed');
+}
 
 find.addEventListener('click', () => {
-  form.classList.toggle("collapsed");
+
+  if( newFormElement.classList.contains('collapsed' ) ) {
+    showNewCatForm();
+  } else {
+    hideNewCatForm();
+  };
+
+//  form.classList.toggle("collapsed");
+// Forma de ocultar el formulario en el temario de funciones
 });
 
 
